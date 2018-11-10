@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Paaji">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./pizzajs.js"></script>
+    <title>Order Pizza</title>
+  </head>
+  <body>
+    
+    <div id="pizza-header">
+        <h1><img src="./images/pizzaslice.png" alt="" />Pizza Order</h1>
+    </div>
+    <div id="wrapper">
+        <div id="tab-header">
+            <ul>
+                <li id="tab-nav-1" tab="1" class="tab-active"><a href="#">Size & Crust</a></li>
+                <li id="tab-nav-2" tab="2"><a href="#">Cheese & Sauce</a></li>
+                <li id="tab-nav-3" tab="3"><a href="#">Toppings</a></li>
+            </ul>
+        </div>
+        <div id="tabs">
+            <div id="tabs-cell">
+                <div class="tab" id="tab-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7 col-sm-12">
+                                <h3>Select Pizza Size:</h3>
+                                <div class="pizza-sizes container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="size-personal"><div class="s-pizza s-personal">6"</div>
+                                            <input type="radio" name="pizzasize" id="size-personal" value="1" /> Personal</label>
+                                        </div>
+                                        <div class="col">
+                                            <label for="size-medium"><div class="s-pizza s-medium">10"</div> 
+                                            <input type="radio" name="pizzasize" id="size-medium" value="2" /> Medium</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="size-large"><div class="s-pizza s-large">12"</div> 
+                                            <input type="radio" name="pizzasize" id="size-large" value="3" /> Large</label>
+                                        </div>
+                                        <div class="col">
+                                            <label for="size-xlarge"><div class="s-pizza s-xlarge">14"</div> 
+                                            <input type="radio" name="pizzasize" id="size-xlarge" value="4" /> Extra Large</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="crust-options label-sel col-md-5 col-sm-12">
+                                <h3>Choose Crust:</h3>
+                                <p><label for="crust-1"><input type="radio" name="pizzacrust" id="crust-1" value="1" /> Plain Crust</label></p>
+                                <p><label for="crust-2"><input type="radio" name="pizzacrust" id="crust-2" value="2" /> Garlic Butter Crust</label></p>
+                                <p><label for="crust-3"><input type="radio" name="pizzacrust" id="crust-3" value="3" /> Spicy Crust</label></p>
+                                <p><label for="crust-4"><input type="radio" name="pizzacrust" id="crust-4" value="4" /> House Special Crust</label></p>
+                                <p><label for="crust-5"><input type="radio" name="pizzacrust" id="crust-5" value="5" /> Cheese Stuffed Crust</label></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab" id="tab-2">
+                    <div class="cheese-sauce container">
+                        <div class="row">
+                            <div class="cheese-options label-sel col">
+                                <h3>Cheese:</h3>
+                                <p><label for="cheese-1"><input type="radio" name="pizzacheese" id="cheese-1" value="1" /> Regular Cheese</label></p>
+                                <p><label for="cheese-2"><input type="radio" name="pizzacheese" id="cheese-2" value="2" /> Extra Cheese</label></p>
+                                <p><label for="cheese-3"><input type="radio" name="pizzacheese" id="cheese-3" value="3" /> No Cheese</label></p>
+                            </div>
+                            <div class="sauce-options label-sel col">
+                                <h3>Choose Sauce:</h3>
+                                <p><label for="sauce-1"><input type="radio" name="pizzasauce" id="sauce-1" value="1" /> Marinara Sauce</label></p>
+                                <p><label for="sauce-2"><input type="radio" name="pizzasauce" id="sauce-2" value="2" /> White Sauce</label></p>
+                                <p><label for="sauce-3"><input type="radio" name="pizzasauce" id="sauce-3" value="3" /> Barbeque Sauce</label></p>
+                                <p><label for="sauce-4"><input type="radio" name="pizzasauce" id="sauce-4" value="4" /> No Sauce</label></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab" id="tab-3">
+                    <div class="toppings container">
+                        <div class="row">
+                            <div class="meats-options label-sel col">
+                                <h3>Meats:</h3>
+                                <p><label for="m1"><input type="checkbox" name="pizzameat" id="m1" value="1" /> Pepperoni</label></p>
+                                <p><label for="m2"><input type="checkbox" name="pizzameat" id="m2" value="2" /> Sausage</label></p>
+                                <p><label for="m3"><input type="checkbox" name="pizzameat" id="m3" value="3" /> Canadian Bacon</label></p>
+                                <p><label for="m4"><input type="checkbox" name="pizzameat" id="m4" value="4" /> Ground Beef</label></p>
+                                <p><label for="m5"><input type="checkbox" name="pizzameat" id="m5" value="5" /> Anchovy</label></p>
+                                <p><label for="m6"><input type="checkbox" name="pizzameat" id="m6" value="6" /> Chicken</label></p>
+                            </div>
+                            <div class="vegi-options label-sel col">
+                                <h3>Veggies:</h3>
+                                <p><label for="v1"><input type="checkbox" name="pizzaveg" id="v1" value="1" /> Tomatoes</label></p>
+                                <p><label for="v2"><input type="checkbox" name="pizzaveg" id="v2" value="2" /> Onions</label></p>
+                                <p><label for="v3"><input type="checkbox" name="pizzaveg" id="v3" value="3" /> Olives</label></p>
+                                <p><label for="v4"><input type="checkbox" name="pizzaveg" id="v4" value="4" /> Green Peppers</label></p>
+                                <p><label for="v5"><input type="checkbox" name="pizzaveg" id="v5" value="5" /> Mushrooms</label></p>
+                                <p><label for="v6"><input type="checkbox" name="pizzaveg" id="v6" value="6" /> Pineapple</label></p>
+                                <p><label for="v7"><input type="checkbox" name="pizzaveg" id="v7" value="7" /> Spinach</label></p>
+                                <p><label for="v8"><input type="checkbox" name="pizzaveg" id="v8" value="8" /> Jalapenos</label></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="order-details">
+            <div class="container">
+                <h3>Your Current Pizza:</h3>
+                <div class="current-pizza container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div id="o-size"></div>
+                            <div id="o-crust"></div>
+                        </div>
+                        <div class="col-6">
+                            <div id="o-cheese"></div>
+                            <div id="o-sauce"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">                            
+                            <ul id="o-top"><li class="top-title"><strong>Toppings:</strong></li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-button container">
+                    <div class="row">
+                        <div class="col">
+                            <button id="submit-order" class="btn" type="button" disabled>Submit Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="order-result" class="container text-center">
+        <h3>Order Submitted!</h3>
+        <div class="container text-left">
+            <div class="row">
+                <div class="col font-weight-bold">
+                    Order Summary:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table table-sm">
+                        <tbody id="order-sum"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
